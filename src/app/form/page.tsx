@@ -4,7 +4,7 @@ const FormPage = () => {
   console.log("hello form");
   return (
     <PageLayout source="form">
-      |<h1>form</h1>
+      <h1>form</h1>
     </PageLayout>
   );
 };
