@@ -1,12 +1,9 @@
-import { Button } from "@chakra-ui/react";
-import Link from "next/link";
-
-const Footer = ({ source }: { source: string }) => {
+const Footer = () => {
   return (
     <footer
       style={{
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "center",
         alignItems: "center",
         padding: "1rem",
         height: "10vh",
@@ -14,15 +11,7 @@ const Footer = ({ source }: { source: string }) => {
         backgroundColor: "#69c983",
       }}
     >
-      {source === "form" ? (
-        <Link href="/">
-          <Button as="a">Home</Button>
-        </Link>
-      ) : (
-        <Link href="/form">
-          <Button as="a">Form</Button>
-        </Link>
-      )}
+      <h1>ACME - APP</h1>
     </footer>
   );
 };

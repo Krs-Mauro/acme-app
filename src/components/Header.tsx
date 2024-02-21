@@ -16,11 +16,11 @@ const Header = ({ source }: { source: string }) => {
     >
       {source === "form" ? (
         <Link href="/">
-          <Button as="a">Home</Button>
+          <Button>Home</Button>
         </Link>
       ) : (
         <Link href="/form">
-          <Button as="a">Form</Button>
+          <Button>Form</Button>
         </Link>
       )}
     </header>

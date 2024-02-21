@@ -1,7 +1,12 @@
-export default function Home() {
+import PageLayout from "@/components/PageLayout";
+
+const Home = () => {
+  console.log("hello index");
   return (
-    <main>
-      <h1>this is ia value</h1>
-    </main>
+    <PageLayout source="index">
+      <h1>index</h1>
+    </PageLayout>
   );
-}
+};
+
+export default Home;
