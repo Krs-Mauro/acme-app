@@ -1,12 +1,13 @@
 "use client";
-
 import { Button } from "@chakra-ui/react";
 import useStore from "@/lib/store";
 
 const LoginButton = () => {
   const { isLoggedIn, toggleLogin } = useStore();
   return (
-    <Button onClick={toggleLogin}>{isLoggedIn ? "Logout" : "Login"}</Button>
+    <Button maxWidth="250px" onClick={toggleLogin}>
+      {isLoggedIn ? "Logout" : "Login"}
+    </Button>
   );
 };
 

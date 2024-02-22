@@ -5,7 +5,13 @@ import Link from "next/link";
 import LoginButton from "./LoginButton";
 
 const Header = ({ source }: { source: string }) => (
-  <Flex alignItems="center" justifyContent="space-between" p={4} bg="cyan.800">
+  <Flex
+    alignItems="center"
+    justifyContent="space-between"
+    width="100vw"
+    p={4}
+    bg="cyan.800"
+  >
     {source === "form" ? (
       <Link href="/">
         <Button>Home</Button>

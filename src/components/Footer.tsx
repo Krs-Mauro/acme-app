@@ -6,6 +6,7 @@ const Footer = () => {
       alignItems="center"
       justifyContent="center"
       p={4}
+      width="100vw"
       bg="cyan.800"
       height="80px"
     >
