@@ -1,5 +1,5 @@
 "use client";
-import { Heading, Button } from "@chakra-ui/react";
+import { Heading, Button, Box } from "@chakra-ui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -24,37 +24,38 @@ const FormPage = () => {
 
   return (
     <PageLayout source="form">
-      <Heading>Create your request here:</Heading>
-
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <InputField
-          name="name"
-          placeholder="Name"
-          register={register}
-          errors={errors}
-        />
-        <InputField
-          name="description"
-          placeholder="Description"
-          register={register}
-          errors={errors}
-        />
-        <InputField
-          name="owner"
-          placeholder="Owner"
-          register={register}
-          errors={errors}
-        />
-        <InputField
-          name="email"
-          placeholder="Email"
-          register={register}
-          errors={errors}
-        />
-        <Button m={2} type="submit">
-          Submit
-        </Button>
-      </form>
+      <Box>
+        <Heading p={10}>Create your request here:</Heading>
+        <form onSubmit={handleSubmit(onSubmit)} style={{ textAlign: "center" }}>
+          <InputField
+            name="name"
+            placeholder="Name"
+            register={register}
+            errors={errors}
+          />
+          <InputField
+            name="description"
+            placeholder="Description"
+            register={register}
+            errors={errors}
+          />
+          <InputField
+            name="owner"
+            placeholder="Owner"
+            register={register}
+            errors={errors}
+          />
+          <InputField
+            name="email"
+            placeholder="Email"
+            register={register}
+            errors={errors}
+          />
+          <Button m={2} type="submit">
+            Submit
+          </Button>
+        </form>
+      </Box>
     </PageLayout>
   );
 };
