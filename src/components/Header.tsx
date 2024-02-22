@@ -1,30 +1,22 @@
-import { Button } from "@chakra-ui/react";
-import Link from "next/link";
+"use client";
 
-const Header = ({ source }: { source: string }) => {
-  return (
-    <header
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "1rem",
-        height: "10vh",
-        width: "100%",
-        backgroundColor: "#69c983",
-      }}
-    >
-      {source === "form" ? (
-        <Link href="/">
-          <Button>Home</Button>
-        </Link>
-      ) : (
-        <Link href="/form">
-          <Button>Form</Button>
-        </Link>
-      )}
-    </header>
-  );
-};
+import { Button, Flex } from "@chakra-ui/react";
+import Link from "next/link";
+import LoginButton from "./LoginButton";
+
+const Header = ({ source }: { source: string }) => (
+  <Flex alignItems="center" justifyContent="space-between" p={4} bg="cyan.800">
+    {source === "form" ? (
+      <Link href="/">
+        <Button>Home</Button>
+      </Link>
+    ) : (
+      <Link href="/form">
+        <Button>Form</Button>
+      </Link>
+    )}
+    <LoginButton />
+  </Flex>
+);
 
 export default Header;
