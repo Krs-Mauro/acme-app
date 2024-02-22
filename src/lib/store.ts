@@ -3,6 +3,8 @@ import { create } from "zustand";
 interface item {
   name: string;
   description: string;
+  owner: string;
+  email: string;
 }
 
 interface storeState {
