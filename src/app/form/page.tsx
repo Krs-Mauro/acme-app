@@ -2,6 +2,7 @@
 import { Heading, Button, Box } from "@chakra-ui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
 import { z } from "zod";
 import PageLayout from "@/components/PageLayout";
 import InputField from "@/components/InputField";
@@ -12,6 +13,7 @@ type formData = z.infer<typeof schema>;
 
 const FormPage = () => {
   const { addItem } = useStore();
+  const router = useRouter();
   const {
     handleSubmit,
     register,
@@ -20,7 +22,10 @@ const FormPage = () => {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data: formData) => addItem(data);
+  const onSubmit = (data: formData) => {
+    addItem(data);
+    router.push("/");
+  };
 
   return (
     <PageLayout source="form">
