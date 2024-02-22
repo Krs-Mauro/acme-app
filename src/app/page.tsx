@@ -1,7 +1,8 @@
 "use client";
-import { Box, Heading, Flex, Button } from "@chakra-ui/react";
+import { Box, Heading, Flex } from "@chakra-ui/react";
 
 import PageLayout from "@/components/PageLayout";
+import Card from "@/components/Card";
 import useStore from "@/lib/store";
 
 const Home = () => {
@@ -9,16 +10,14 @@ const Home = () => {
   return (
     <PageLayout source="index">
       <Box>
-        <Heading>These are the existing requests:</Heading>
+        <Heading m={10}>
+          {items.length
+            ? "These are the existing requests"
+            : "Start by creating a new request with the form button"}
+        </Heading>
         <Flex>
           {items.map((item, index) => (
-            <Box key={index} p={4}>
-              <p>{item.name}</p>
-              <p>{item.description}</p>
-              <p>{item.owner}</p>
-              <p>{item.email}</p>
-              <Button>Delete</Button>
-            </Box>
+            <Card key={index} item={item} index={index} />
           ))}
         </Flex>
       </Box>
