@@ -14,7 +14,64 @@ interface storeState {
 
 const initialState: storeState = {
   isLoggedIn: false,
-  items: [],
+  items: [
+    {
+      name: "name 1",
+      description: "description with many words",
+      owner: "the owner",
+      email: "email@email.com",
+    },
+    {
+      name: "name 2",
+      description: "description with few words",
+      owner: "a guy",
+      email: "other@email.com",
+    },
+    {
+      name: "name 2",
+      description:
+        "description with few words description with few wordsdescription with few words description with few words description with few words description with few wordsption with few wordsdescription with few words description with few words description with few words description with few wordsption with few wordsdescription with few words description with few words description with few words description with few wordsption with few wordsdescription with few words description with few words description with few words description with few words",
+      owner: "a guy",
+      email: "other@email.com",
+    },
+    {
+      name: "name 2",
+      description: "description with few words",
+      owner: "a guy",
+      email: "other@email.com",
+    },
+    {
+      name: "name 2",
+      description: "description with few words",
+      owner: "a guy",
+      email: "other@email.com",
+    },
+    {
+      name: "name 2",
+      description:
+        "description with few words description with few wordsdescription with few wordsdescription with few wordsdescription with few wordsdescription with few words description with few wordsdescription with few wordsdescription with few words description with few words description with few words",
+      owner: "a guy",
+      email: "other@email.com",
+    },
+    {
+      name: "name 2",
+      description: "description with few words",
+      owner: "a guy",
+      email: "other@email.com",
+    },
+    {
+      name: "name 2",
+      description: "description with few words",
+      owner: "a guy",
+      email: "other@email.com",
+    },
+    {
+      name: "name 2",
+      description: "description with few words",
+      owner: "a guy",
+      email: "other@email.com",
+    },
+  ],
 };
 
 type storeActions = {

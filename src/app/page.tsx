@@ -9,13 +9,13 @@ const Home = () => {
   const { items } = useStore();
   return (
     <PageLayout source="index">
-      <Box>
+      <Box textAlign="center">
         <Heading m={10}>
           {items?.length
             ? "These are the existing requests"
             : "Start by creating a new request with the form button"}
         </Heading>
-        <Flex flexWrap="wrap" gap={2} padding={2}>
+        <Flex flexWrap="wrap" gap={2} padding={2} justifyContent="center">
           {items?.map((item, index) => (
             <Card key={index} item={item} index={index} />
           ))}
