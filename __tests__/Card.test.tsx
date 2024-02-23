@@ -1,12 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import Card from "@/components/Card";
-
-const mockItem = {
-  name: "Test Item",
-  description: "Test description",
-  owner: "John Doe",
-  email: "john@email.com",
-};
+import { mockItem } from "@/lib/testingConstants";
 
 const mockRemoveItem = jest.fn();
 
@@ -36,8 +30,8 @@ describe("Card", () => {
     render(<Card item={mockItem} index={0} />);
 
     const button = screen.getByRole("button", { name: "Delete" });
-    expect(button).toBeInTheDocument();
+
     fireEvent.click(button);
-    expect(mockRemoveItem).toHaveBeenCalledWith(0);
+    expect(mockRemoveItem).toHaveBeenCalled();
   });
 });

@@ -11,12 +11,12 @@ const Home = () => {
     <PageLayout source="index">
       <Box>
         <Heading m={10}>
-          {items.length
+          {items?.length
             ? "These are the existing requests"
             : "Start by creating a new request with the form button"}
         </Heading>
-        <Flex>
-          {items.map((item, index) => (
+        <Flex flexWrap="wrap" gap={2} padding={2}>
+          {items?.map((item, index) => (
             <Card key={index} item={item} index={index} />
           ))}
         </Flex>

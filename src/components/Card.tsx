@@ -23,6 +23,7 @@ const Card = ({ item, index }: { item: item; index: number }) => {
       borderRadius="lg"
       width="250px"
       p={4}
+      data-testid={"card"}
     >
       <Box
         backgroundColor="white"
@@ -33,7 +34,9 @@ const Card = ({ item, index }: { item: item; index: number }) => {
       >
         <BoldText size="md" text={item.name} />
         <BoldText size="sm" text={item.owner} />
-        <Text>{item.description}</Text>
+        <Text overflowY="auto" maxHeight="100px">
+          {item.description}
+        </Text>
         <BoldText size="sm" text={item.email} />
         <Button mt={3} backgroundColor="cyan.300" onClick={handleDelete}>
           Delete
