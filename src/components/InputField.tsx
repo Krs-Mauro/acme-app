@@ -1,7 +1,6 @@
 "use client";
 import { UseFormRegister, FieldErrors } from "react-hook-form";
 import { Input, FormControl, FormErrorMessage } from "@chakra-ui/react";
-import exp from "constants";
 
 type inputFieldTypes = {
   name: "name" | "description" | "owner" | "email";
